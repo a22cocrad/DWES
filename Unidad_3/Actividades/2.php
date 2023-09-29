@@ -2,15 +2,15 @@
 
 <?php
 
-$mes = 2;
-$anio = 2024;
-$pares = [4,6,9,11];
+$month = 2;
+$year = 2024;
+$high = [4,6,9,11];
 
-if (in_array($mes, $pares)){
+if (in_array($month, $high)){
     echo "30 días";
-} else if ($mes == 2 and ($anio % 4 == 0 and $anio % 100 !=0 or $anio % 400 == 0)) {
+} else if ($month == 2 and ($year % 4 == 0 and $year % 100 !=0 or $year % 400 == 0)) {
     echo "29 días";
-} else if ($mes == 2) {
+} else if ($month == 2) {
     echo "28 días";
 } else {
     echo "31 días";
