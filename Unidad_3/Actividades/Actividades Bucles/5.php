@@ -23,6 +23,8 @@ $high = [4,6,9,11];
     <table border=1>
 <?php
 if (in_array($month, $high)){
+    echo("Mes introducido: " . $month);
+    echo("Año introducido: " . $year);
     $numero = 1;
     for ($i=1; $i <= 5; $i++) { 
         echo("<tr>");
@@ -35,6 +37,8 @@ if (in_array($month, $high)){
         }echo("</tr>");
     }
 } else if ($month == 2 and ($year % 4 == 0 and $year % 100 !=0 or $year % 400 == 0)) {
+    echo("Mes introducido: " . $month);
+    echo("Año introducido: " . $year);
     $numero = 1;
     for ($i=1; $i <= 5; $i++) { 
         echo("<tr>");
@@ -47,6 +51,8 @@ if (in_array($month, $high)){
         }echo("</tr>");
     }
 } else if ($month == 2) {
+    echo("Mes introducido: " . $month);
+    echo("Año introducido: " . $year);
     $numero = 1;
     for ($i=1; $i <= 4; $i++) { 
         echo("<tr>");
@@ -60,6 +66,8 @@ if (in_array($month, $high)){
     }
 } else {
     $numero = 1;
+    echo("Mes introducido: " . $month);
+    echo("Año introducido: " . $year);
     for ($i=1; $i <= 5; $i++) { 
         echo("<tr>");
         for ($j=1; $j <= 7; $j++) { 
