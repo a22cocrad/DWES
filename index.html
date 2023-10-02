@@ -7,14 +7,26 @@
     <title>DWES</title>
 </head>
 <body>
- <h1>Adrián Cordovero Crespo</h1>   
+ <h1 style="text-align: center;">DWES</h1> <hr>
+ <h2 style="text-align: right;">Adrián Cordovero Crespo</h2>
+ <div id="current_date" style="text-align: right;">
+    <script>
+        date = new Date();
+        year = date.getFullYear();
+        month = date.getMonth() + 1;
+        day = date.getDate();
+        document.getElementById("current_date").innerHTML = day + "/" + month + "/" + year;
+    </script>
+</div>
+ <h2 style="text-align: center;">Unidades</h2> <hr>
+<div style="text-align: center;">
+    <a href="./Portfolio/index.php">Portfolio</a> <br>
+    <a href="./Unidad_1/">Unidad 1</a> <br>
+    <a href="./Unidad_2/">Unidad 2</a> <br>
+    <a href="./Unidad_3/">Unidad 3</a> <br>
+    <a href="./Unidad_4/">Unidad 4</a> <br>
+</div>
 
- <h2>Unidades</h2>
-
- <a href="./Unidad_1/">Unidad 1</a> <br>
- <a href="./Unidad_2/">Unidad 2</a> <br>
- <a href="./Unidad_3/">Unidad 3</a> <br>
- <a href="./Unidad_4/">Unidad 4</a>
 
 
 </body>
