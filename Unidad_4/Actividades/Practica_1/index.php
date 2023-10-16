@@ -36,10 +36,10 @@ if (isset($_COOKIE["password"])) {
 <body>
     <form action="" method="post">
         <label>Usuario:
-            <input type="text" name="user" placeholder="Usuario">
+            <input type="text" name="user" placeholder="Usuario" value="<?php echo $user ?>">
         </label> <br>
         <label>Contraseña:
-            <input type="text" name="password" placeholder="Contraseña">
+            <input type="password" name="password" placeholder="Contraseña" value="<?php echo $password ?>">
         </label><br>
         <label>
             <input type="checkbox" name="remindMe"> Recordar información <br>
