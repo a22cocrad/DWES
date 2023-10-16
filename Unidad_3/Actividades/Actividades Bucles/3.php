@@ -19,16 +19,26 @@
 <body>
 
     <?php
-    $multiplicando;
-    $multiplicador;
-    echo "<table text-align:center; border=5>";
-    for ($multiplicador = 1; $multiplicador < 11; $multiplicador++) {
-        for ($multiplicando = 01; $multiplicando < 11; $multiplicando++) {
-            echo ("<td>" . $multiplicando * $multiplicador . "</td>");
+    $lEnviado = false;
+    if (!$lEnviado) {
+        
+    }
+    echo '<form method="post" action="procesar.php">';
+    echo "<table text-align:center; border=1>";
+    for ($multiplicador = 1; $multiplicador <= 10; $multiplicador++) {
+        for ($multiplicando = 1; $multiplicando <= 10; $multiplicando++) {
+            $resultado = $multiplicador * $multiplicando;
+            if (rand(0, 30) == 0) {
+                echo '<td><input style="background-color:red" type="number" required name="' . $resultado . '"></td>' ;
+            } 
+            else {
+                echo ("<td>" . $resultado . "</td>");
+            }
         }
         echo "</tr>";
     }
     echo "</table>";
+    echo '<input type="submit" value="Submit">';
     ?>
 
 </body>
