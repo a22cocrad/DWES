@@ -1,10 +1,5 @@
 <?php
-if (!isset($_POST['submit'])) {
-    echo 'ERROR. Debes rellenar el formulario.';
-} else {
-    session_start();
-    // https://www.uv.mx/pozarica/caa-conta/files/2016/02/REGULAR-AND-IRREGULAR-VERBS.pdf
-    $verbList = array(
+$verbList = array(
         array("Arise", "Arose", "Arisen", "Surgir, Levantarse"),
         array("Awake", "Awoke", "Awoken", "Despertarse"),
         array("Be/ am, are, is", "Was / Were", "Been", "Ser / Estar"),
@@ -160,39 +155,12 @@ if (!isset($_POST['submit'])) {
         array("Wring", "Wrung", "Wrung", "Torcer"),
         array("Write", "Wrote", "Written", "Escribir")
     );
-    $number_verbs = $_POST['number_verbs'];
-    $difficulty = $_POST['difficulty'];
-    $length = count($verbList);
-    if (!isset($_SESSION['random_verbs_list'])) {
 
-        $randomIndexes = array_rand($verbList, $number_verbs);
-        $selectedVerbs = array();
-        // // Iterar a través de los índices aleatorios y seleccionar 2 valores de cada uno
-        foreach ($randomIndexes as $index) {
-            $selectedVerbs = array_slice($verbList[$index], 0, $difficulty);
-        }
-        // $resultVerbList = array_rand($random_verbs_list, $difficulty);
-        // echo $resultVerbList;
 
-        $_SESSION['random_verbs_list'] = $random_verbs_list;
-    } else {
-        $random_verbs_list = $_SESSION['random_verbs_list'];
-        $resultVerbList = $_SESSION['resultVerbList'];
-    }
 
-    session_destroy();
-    echo '<form action="validar_formulario.php" method="POST">';
-    echo "<table border='1'>";
-    foreach ($random_verbs_list as $list) {
-        echo "<tr>";
-        foreach ($list as $verb) {
-            if ($verb) {
-                echo '<td><input type="text" name="" value=""></td>';
-                continue;
-            }
-            echo '<td>' . $verb . '</td>';
-        }
-    }
-}
-echo '<button type="submit" name="submit">Enviar</button>';
-echo '</form>';
+$number_verbs = 4;
+$randomIndexes = array_rand($verbList, $number_verbs);
+echo $randomIndexes[0];
+    
+    
+    ?>
