@@ -165,16 +165,22 @@ if (!isset($_POST['submit'])) {
     $length = count($verbList);
     if (!isset($_SESSION['random_verbs_list'])) {
 
-        $randomIndexes = array_rand($verbList, $number_verbs);
-        $selectedVerbs = array();
-        // // Iterar a través de los índices aleatorios y seleccionar 2 valores de cada uno
-        foreach ($randomIndexes as $index) {
-            $selectedVerbs = array_slice($verbList[$index], 0, $difficulty);
+        // obtengo, segun la cantidad de verbos que el usuario proporciona, un numero de indices sobre la lista de verbos
+        $randomIndexes1 = array_rand($verbList, $number_verbs); 
+        $selectedVerbs1 = array();
+        // meto en el array selectedverbs1, otro array con los verbos que han salido aleatoriamente.
+        foreach ($randomIndexes1 as $index) {
+            $selectedVerbs1[] = array_slice($verbList[$index], 0, 4);
         }
-        // $resultVerbList = array_rand($random_verbs_list, $difficulty);
-        // echo $resultVerbList;
+        // de los verbos aleatorios que tenemos, saco, segun la dificultad, un numero de indices
+        foreach ($selectedVerbs1 as $verb) {
+            $randomIndexes2[] = array_rand($verb, $difficulty);
+        } // AQUI HAY ALGO MAL || HACER CON CHATGPT
+        for ($i=0; $i < count($randomIndexes2); $i++) { 
+            echo $randomIndexes2[$i][$i];
+        }
+        // $_SESSION['random_verbs_list'] = $random_verbs_list;
 
-        $_SESSION['random_verbs_list'] = $random_verbs_list;
     } else {
         $random_verbs_list = $_SESSION['random_verbs_list'];
         $resultVerbList = $_SESSION['resultVerbList'];
@@ -183,14 +189,14 @@ if (!isset($_POST['submit'])) {
     session_destroy();
     echo '<form action="validar_formulario.php" method="POST">';
     echo "<table border='1'>";
-    foreach ($random_verbs_list as $list) {
+    foreach ($selectedVerbs1 as $verb) {
         echo "<tr>";
-        foreach ($list as $verb) {
-            if ($verb) {
+        foreach ($verb as $form) {
+            if ($form) {
                 echo '<td><input type="text" name="" value=""></td>';
                 continue;
             }
-            echo '<td>' . $verb . '</td>';
+            echo '<td>' . $form . '</td>';
         }
     }
 }
