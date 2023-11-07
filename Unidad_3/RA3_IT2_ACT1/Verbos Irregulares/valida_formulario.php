@@ -28,13 +28,13 @@ if(isset($_POST["submit"])) {
         echo "</tr>";
     }
     echo "</table> <br>";
-    if($contadorfallos > 0) {
     echo '<button type="submit" name="submit">RESOLVER</button><br>';
-    }
+    echo '</form>';
     echo"NÚMERO DE ACIERTOS: " . $contadoraciertos;
     echo"<br> NÚMERO DE FALLOS: " . $contadorfallos;
     echo"<br> PORCENTAJE DE ACIERTOS: " . ($contadoraciertos / ($contadoraciertos + $contadorfallos)) * 100 . "%";
 
+    
 
 
 

@@ -22,7 +22,7 @@ if(isset($_POST["submit"])) {
 }
 
     echo'<form action="valida_formulario.php" method="post">';
-    echo"<table>";
+    echo"<table border=1>";
     for ($i = 0; $i < count($verbosAleatorios); $i++) {
         echo "<tr>";
         $contador = 0;
@@ -31,7 +31,7 @@ if(isset($_POST["submit"])) {
                 $contador++;
                 echo '<td><input type="text" name="' . $i . '-' . $j . '" required> </td>';
             } else {
-                echo "<td>" . $verbosAleatorios[$i][$j] . "</td>";
+                echo "<td style='background-color: #FFD1B3;'>" . $verbosAleatorios[$i][$j] . "</td>";
             }
         }
         echo "</tr>";
