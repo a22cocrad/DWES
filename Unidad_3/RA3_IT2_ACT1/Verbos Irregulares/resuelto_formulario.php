@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="./config/style.css">
+
 <?php
 session_start();
 
@@ -15,8 +17,8 @@ if(isset($_POST["submit"])) {
 
         echo "</tr>";
     }
-    echo "</table> <br>";
-    echo '¡Enhorabuena! <a href="./">VOLVER';
+    echo '<button><a href="./">VOLVER </button>';
+    echo "</table>";
     session_destroy();
     
 } else {

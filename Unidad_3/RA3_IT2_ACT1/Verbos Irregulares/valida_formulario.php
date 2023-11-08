@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="./config/style.css">
+
 <?php
 session_start();
 
@@ -27,12 +29,14 @@ if(isset($_POST["submit"])) {
         }
         echo "</tr>";
     }
+    
     echo "</table> <br>";
+    
     echo '<button type="submit" name="submit">RESOLVER</button><br>';
-    echo '</form>';
-    echo"NÚMERO DE ACIERTOS: " . $contadoraciertos;
+    echo"<div>NÚMERO DE ACIERTOS: " . $contadoraciertos;
     echo"<br> NÚMERO DE FALLOS: " . $contadorfallos;
-    echo"<br> PORCENTAJE DE ACIERTOS: " . ($contadoraciertos / ($contadoraciertos + $contadorfallos)) * 100 . "%";
+    echo"<br> PORCENTAJE DE ACIERTOS: " . ($contadoraciertos / ($contadoraciertos + $contadorfallos)) * 100 . "%</div>";
+    echo '</form>';
 
     
 

@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="./config/style.css">
+
 <?php
 session_start();
 include("./config/verbos.php");
@@ -31,7 +33,7 @@ if(isset($_POST["submit"])) {
                 $contador++;
                 echo '<td><input type="text" name="' . $i . '-' . $j . '" required> </td>';
             } else {
-                echo "<td style='background-color: #FFD1B3;'>" . $verbosAleatorios[$i][$j] . "</td>";
+                echo "<td style='background-color: lightgrey;'>" . $verbosAleatorios[$i][$j] . "</td>";
             }
         }
         echo "</tr>";

@@ -29,6 +29,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./config/style.css">
     <title>Adrián Cordovero Crespo</title>
 </head>
 
@@ -39,14 +40,14 @@
             <input type="text" name="numerodeverbos" placeholder="Número de verbos" value="" required> <br> <br>
         </label>
         <label>
-            Número de huecos:
+            Dificultad:
             <select name="dificultad">
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
             </select> <br> <br>
         </label>
-        <button type="submit" name="submit">Enviar</button>
+        <button type="submit" name="submit">Comenzar</button>
 
     </form>
 </body>

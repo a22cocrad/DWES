@@ -1,0 +1,79 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: lightblue; /* Color de fondo suave para la página */
+  }
+  input, input::placeholder{
+    text-align: center;
+    width: 200px; /* Ancho del input */
+    height: 50px; /* Altura del input */
+    padding: auto; /* Espacio interno alrededor del texto */
+    font-size: 20px; /* Tamaño del texto */
+    box-sizing: border-box; /* Asegura que padding y border no aumenten el tamaño */
+    display: block;
+  }
+
+  select{
+    text-align: center;
+    width: 100px;
+    height: 50px;
+    font-size: 25px;
+    box-sizing: border-box;
+    display: block;
+  }
+  label {
+    text-align: center;
+    font-size: 25px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  button {
+    padding: 15px 30px; /* Tamaño grande para el botón */
+    background-color: #007bff; /* Color de fondo distinto para el botón */
+    border: none;
+    color: white;
+    font-size: 18px; /* Letra más grande para el botón */
+    cursor: pointer;
+    ;
+  }
+  
+  button:hover {
+    background-color: #0056b3; /* Color de fondo al pasar el ratón por encima */
+  }
+  
+  /* Estilo general de la tabla */
+table {
+    width: 100%; /* Ajusta esto según la anchura deseada */
+    border-collapse: collapse; /* Elimina el espacio entre celdas */
+    margin: 25px 0; /* Añade espacio alrededor de la tabla */
+    font-size: 18px; /* Aumenta el tamaño de la fuente */
+    text-align: center; /* Alinea el texto a la izquierda */
+    box-shadow: 0 4px 3px rgba(0,0,0,0.1); /* Sombra sutil para la tabla */
+  }
+  
+  
+  /* Estilo de las celdas de la tabla */
+  td {
+    height: 50px;
+    width: 200px;
+    padding: 15px; /* Espacio alrededor del contenido en las celdas */
+    border-bottom: 1px solid whitesmoke; /* Línea separadora entre filas */
+  }
+  
+  div{
+    text-align: center;
+    padding: 30px;
+    font-size: 19px;
+    background-color: #007bff;
+    display: block;
+
+}
